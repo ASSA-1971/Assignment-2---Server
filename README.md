@@ -40,6 +40,5 @@ Microsoft.EntityFrameworkCore.Tools
 
 Install via NuGet Package Manager or the Package Manager Console.
 
-## Live site
 
-*(add your MonsterASP or Azure URL here once deployed)*
+
