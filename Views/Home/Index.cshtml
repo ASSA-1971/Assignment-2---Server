@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="p-4">
+    <h1>Welcome to the Bookstore</h1>
+    <p class="lead">
+        This site lets you manage a catalog of authors and their books.
+        You can add, edit, and delete records from both tables.
+    </p>
+    <hr />
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <h4>Authors</h4>
+            <p>Manage author profiles including name and bio.</p>
+            <a asp-controller="Authors" asp-action="Index" class="btn btn-outline-primary">View Authors</a>
+        </div>
+        <div class="col-md-4">
+            <h4>Books</h4>
+            <p>Manage the book catalog and assign each book to an author.</p>
+            <a asp-controller="Books" asp-action="Index" class="btn btn-outline-primary">View Books</a>
+        </div>
+    </div>
+</div>

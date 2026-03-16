@@ -1,0 +1,39 @@
+@model IEnumerable<YourApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h2>Books</h2>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Book</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th>Year</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.title</td>
+                <td>@book.genre</td>
+                <td>@book.price.ToString("C")</td>
+                <td>@book.publicationYear</td>
+                <td>@book.Author?.firstName @book.Author?.lastName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@book.bookId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@book.bookId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
